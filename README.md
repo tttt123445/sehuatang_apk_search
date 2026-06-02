@@ -6,14 +6,14 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/platform-Android_7.0+-3DDC84?logo=android&logoColor=white" alt="Android 7.0+">
-  <img src="https://img.shields.io/badge/Kotlin-Compose-7F52FF?logo=kotlin&logoColor=white" alt="Kotlin Compose">
-  <img src="https://img.shields.io/badge/build-Gradle-02303A?logo=gradle&logoColor=white" alt="Gradle">
+  <img src="https://img.shields.io/badge/APK-ready_to_install-0B8F5A" alt="Ready to install">
+  <img src="https://img.shields.io/badge/export-115_batch_text-1677FF" alt="115 batch text export">
   <img src="https://img.shields.io/badge/ABI-arm64--v8a-2B6CB0" alt="arm64-v8a">
 </p>
 
-MagnetCatcher 是一个 Android 端磁力链接整理工具。它把论坛新帖抓取、图片预览、原帖跳转、链接去重和 115 批量导出放在同一个移动端流程里，适合需要在手机上快速筛选并整理磁力文本的场景。
+MagnetCatcher 是一个 Android 端磁力链接整理工具。它把论坛新帖抓取、图片预览、原帖跳转、链接去重和 115 批量导出放在同一个移动端流程里，让原本需要反复打开网页、筛选帖子、复制链接的操作变得更快。
 
-本仓库提供可直接安装的 APK Release 包，也开放 Kotlin、Jetpack Compose、OkHttp 和 NDK/JNI 相关源码，方便审阅、学习和二次开发。
+如果你只是想直接使用，下载 Release 里的 APK 就可以安装，不需要配置开发环境。
 
 <p align="center">
   <img src="docs/screenshots/android-ui-final-running.png" width="360" alt="MagnetCatcher Android 界面截图">
@@ -29,6 +29,16 @@ MagnetCatcher 是一个 Android 端磁力链接整理工具。它把论坛新帖
 4. 安装后打开「磁力抓取 新版」。
 
 当前公开包面向 `arm64-v8a` 设备，要求 Android 7.0 或更高版本。
+
+## 为什么值得下载
+
+| 场景 | MagnetCatcher 帮你做什么 |
+| --- | --- |
+| 只想看新帖 | 直接按今天、昨天、近 7 天或自定义日期抓取，减少翻页和重复查找。 |
+| 想先筛再导出 | 结果列表里可以看标题、摘要和图片，先取消不需要的内容，再统一导出。 |
+| 经常复制磁力 | 自动提取并去重磁力链接，按批次生成文本，减少手工复制出错。 |
+| 手机端操作为主 | 抓取、预览、打开原帖、复制和分享都在 Android App 内完成。 |
+| 网络环境不稳定 | 支持系统 VPN/直连和内置 XTunnel 两种模式，失败时可回退。 |
 
 ## 功能亮点
 
@@ -59,49 +69,39 @@ flowchart LR
 4. 在结果列表中预览图片、打开原帖或取消不需要的帖子。
 5. 使用复制到 115 或分享导出生成磁力文本。
 
-## 技术栈
+## Release 包优势
 
-- Kotlin + Jetpack Compose：负责 Android 原生界面和状态管理。
-- OkHttp + Kotlin Coroutines：负责抓取请求、图片请求、重试和并发调度。
-- Coil：负责图片加载与缓存展示。
-- SharedPreferences + 本地 JSON：保存设置、Cookie 和最近结果。
-- NDK/JNI：桥接内置 XTunnel 运行时。
-- Gradle Android Plugin：管理单模块 Android 工程构建。
+- 预构建 APK，下载后即可安装，省去配置开发环境的时间。
+- 已集成抓取、图片预览、原帖跳转、磁力去重和分享导出流程。
+- 当前版本适合在手机上快速验证和日常整理，不需要手动运行脚本。
+- 更新时只需要下载最新 Release 包覆盖安装。
+- Release 附件会提供 APK 和压缩包，方便按自己的习惯下载保存。
 
-## 源码构建
+## 安装后建议
 
-只想安装使用时，建议下载 Release APK。源码构建适合需要审阅代码、修改逻辑或自行打包的开发者。
+1. 首次打开后先选择常用板块，应用会记住你的选择。
+2. 如果只想抓当天内容，保持默认时间范围即可。
+3. 需要更稳的访问环境时，优先使用系统 VPN/直连；如果网络不可用，再切换内置 XTunnel。
+4. 抓取完成后先预览图片和原帖，取消不需要的帖子，再复制或分享导出。
+5. 如果结果为空，先检查网络模式、Cookie 状态和目标站点是否能正常打开。
 
-```bash
-git clone https://github.com/tttt123445/sehuatang_apk_search.git
-cd sehuatang_apk_search
-./gradlew :app:test
-./gradlew :app:assembleDebug
-```
+## 常见问题
 
-本地构建前需要准备 Android SDK、NDK，并放置 XTunnel 运行所需的本地文件：
+**需要自己编译吗？**
 
-```text
-out/apk-inspect/xtunnel/extract/lib/arm64-v8a/libgo.so
-out/apk-inspect/xtunnel/extract/assets/flutter_assets/assets/embed.data
-```
+不需要。普通用户下载 `magnet-catcher.apk` 直接安装即可。
 
-这些文件属于本机打包依赖，不会提交到 GitHub。仓库中的 `.gitignore` 已经忽略本地构建产物、缓存、密钥和 release 输出目录。
+**为什么安装时会提示未知来源？**
 
-## 项目结构
+这是 Android 对非应用商店 APK 的通用提示。请只从本仓库 Release 页面下载。
 
-```text
-.
-├── app/                  # Android 应用模块
-├── docs/                 # 截图、设计稿和验证素材
-├── gradle/               # Gradle Wrapper 与版本目录
-├── openspec/             # 功能变更记录和规格说明
-├── build.gradle.kts      # 根工程构建配置
-├── settings.gradle.kts   # Gradle 仓库和模块配置
-└── README.md             # 公开项目说明
-```
+**为什么只支持 arm64-v8a？**
 
-核心业务代码位于 `app/src/main/kotlin/com/example/magnetcatcher/`，按 `data`、`domain`、`network`、`parser`、`ui` 和 `xtunnel` 分层组织。
+当前公开 APK 面向主流 64 位 Android 设备打包，后续可以按需要扩展更多 ABI。
+
+**会上传我的本地数据吗？**
+
+应用的设置、Cookie、图片缓存和最近抓取结果保存在 Android 应用本地存储中。仓库不包含本地 Cookie、代理配置、构建缓存或个人路径。
 
 ## 隐私与边界
 
