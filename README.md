@@ -7,8 +7,15 @@
 <p align="center">
   <img src="https://img.shields.io/badge/platform-Android_7.0+-3DDC84?logo=android&logoColor=white" alt="Android 7.0+">
   <img src="https://img.shields.io/badge/APK-ready_to_install-0B8F5A" alt="Ready to install">
+  <img src="https://img.shields.io/badge/install-no_build_needed-16A34A" alt="No build needed">
   <img src="https://img.shields.io/badge/export-115_batch_text-1677FF" alt="115 batch text export">
   <img src="https://img.shields.io/badge/ABI-arm64--v8a-2B6CB0" alt="arm64-v8a">
+  <img src="https://img.shields.io/badge/filter-today_%7C_yesterday_%7C_7_days-14B8A6" alt="Today, yesterday, 7 days filters">
+  <img src="https://img.shields.io/badge/magnet-dedupe_ready-0F766E" alt="Magnet dedupe ready">
+  <img src="https://img.shields.io/badge/images-preview_support-7C3AED" alt="Image preview support">
+  <img src="https://img.shields.io/badge/cache-local_history-F59E0B" alt="Local history cache">
+  <img src="https://img.shields.io/badge/network-VPN_%2F_XTunnel-2563EB" alt="VPN and XTunnel network modes">
+  <img src="https://img.shields.io/badge/privacy-local_data_only-64748B" alt="Local data only">
 </p>
 
 MagnetCatcher 是一个 Android 端磁力链接整理工具。它把论坛新帖抓取、图片预览、原帖跳转、链接去重和 115 批量导出放在同一个移动端流程里，让原本需要反复打开网页、筛选帖子、复制链接的操作变得更快。
