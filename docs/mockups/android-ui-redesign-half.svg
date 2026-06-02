@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="932" viewBox="0 0 430 932">
+  <defs>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="18" flood-color="#10251f" flood-opacity="0.10"/>
+    </filter>
+    <linearGradient id="primaryGradient" x1="70" y1="456" x2="372" y2="456" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#147A5A"/>
+      <stop offset="1" stop-color="#0F9A6E"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="430" height="932" fill="#F8FAF8"/>
+
+  <g id="status-bar">
+    <text x="28" y="30" font-family="PingFang SC, Arial, sans-serif" font-size="14" font-weight="600" fill="#17231F">12:52</text>
+    <rect x="356" y="19" width="25" height="11" rx="3" fill="none" stroke="#17231F" stroke-width="1.4"/>
+    <rect x="383" y="23" width="2.5" height="4" rx="1.2" fill="#17231F"/>
+    <rect x="359" y="22" width="17" height="5" rx="2" fill="#17231F"/>
+    <path d="M330 27 C334 23 340 23 344 27" fill="none" stroke="#17231F" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M315 27 C319 23 324 23 328 27" fill="none" stroke="#17231F" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <g id="app-bar" transform="translate(24 58)">
+    <circle cx="24" cy="24" r="22" fill="#EAF6F0"/>
+    <path d="M15 27V18C15 11 33 11 33 18V27" fill="none" stroke="#147A5A" stroke-width="5" stroke-linecap="round"/>
+    <rect x="10" y="25" width="10" height="8" rx="2" fill="#FFB34A"/>
+    <rect x="28" y="25" width="10" height="8" rx="2" fill="#FFB34A"/>
+    <path d="M24 29L26 34L31 36L26 38L24 43L22 38L17 36L22 34Z" fill="#147A5A"/>
+
+    <text x="58" y="20" font-family="PingFang SC, Arial, sans-serif" font-size="22" font-weight="700" fill="#17231F">磁力抓取</text>
+    <text x="58" y="43" font-family="PingFang SC, Arial, sans-serif" font-size="13" fill="#6B756F">抓新帖，预览图片，导出到 115</text>
+
+    <g transform="translate(340 0)">
+      <rect x="0" y="0" width="48" height="48" rx="8" fill="#FFFFFF" stroke="#E5EAE6"/>
+      <circle cx="24" cy="24" r="5" fill="none" stroke="#17231F" stroke-width="2"/>
+      <path d="M24 10V14M24 34V38M10 24H14M34 24H38M14 14L17 17M31 31L34 34M34 14L31 17M17 31L14 34" stroke="#17231F" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <g id="network-status" transform="translate(24 128)" filter="url(#softShadow)">
+    <rect width="382" height="96" rx="8" fill="#FFFFFF"/>
+    <rect x="16" y="18" width="56" height="56" rx="8" fill="#EAF6F0"/>
+    <circle cx="44" cy="46" r="8" fill="#147A5A"/>
+    <circle cx="44" cy="46" r="16" fill="none" stroke="#147A5A" stroke-opacity="0.22" stroke-width="6"/>
+    <text x="88" y="35" font-family="PingFang SC, Arial, sans-serif" font-size="15" font-weight="700" fill="#17231F">系统 VPN/直连</text>
+    <text x="88" y="59" font-family="PingFang SC, Arial, sans-serif" font-size="12" fill="#6B756F">当前网络可用，代理细节已隐藏</text>
+    <rect x="287" y="27" width="68" height="32" rx="8" fill="#F3F7F4"/>
+    <text x="304" y="48" font-family="PingFang SC, Arial, sans-serif" font-size="13" font-weight="600" fill="#147A5A">设置</text>
+  </g>
+
+  <g id="quick-filter" transform="translate(24 244)">
+    <text x="0" y="18" font-family="PingFang SC, Arial, sans-serif" font-size="16" font-weight="700" fill="#17231F">抓取条件</text>
+    <text x="316" y="18" font-family="PingFang SC, Arial, sans-serif" font-size="13" font-weight="600" fill="#147A5A">调整</text>
+
+    <g transform="translate(0 36)">
+      <rect width="82" height="38" rx="8" fill="#147A5A"/>
+      <text x="27" y="25" font-family="PingFang SC, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">今天</text>
+      <rect x="92" y="0" width="82" height="38" rx="8" fill="#FFFFFF" stroke="#E5EAE6"/>
+      <text x="119" y="25" font-family="PingFang SC, Arial, sans-serif" font-size="14" fill="#17231F">昨天</text>
+      <rect x="184" y="0" width="82" height="38" rx="8" fill="#FFFFFF" stroke="#E5EAE6"/>
+      <text x="211" y="25" font-family="PingFang SC, Arial, sans-serif" font-size="14" fill="#17231F">前天</text>
+      <rect x="276" y="0" width="106" height="38" rx="8" fill="#FFFFFF" stroke="#E5EAE6"/>
+      <text x="301" y="25" font-family="PingFang SC, Arial, sans-serif" font-size="14" fill="#17231F">自定义</text>
+    </g>
+
+    <g transform="translate(0 92)">
+      <rect width="382" height="60" rx="8" fill="#FFFFFF" stroke="#E5EAE6"/>
+      <text x="16" y="25" font-family="PingFang SC, Arial, sans-serif" font-size="12" fill="#6B756F">起始时间</text>
+      <text x="16" y="45" font-family="PingFang SC, Arial, sans-serif" font-size="15" font-weight="700" fill="#17231F">2026-06-02 00:00</text>
+      <path d="M352 23L360 31L352 39" fill="none" stroke="#A2AAA5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <g id="forums" transform="translate(24 430)">
+    <text x="0" y="18" font-family="PingFang SC, Arial, sans-serif" font-size="16" font-weight="700" fill="#17231F">板块</text>
+    <text x="317" y="18" font-family="PingFang SC, Arial, sans-serif" font-size="13" font-weight="600" fill="#147A5A">管理</text>
+    <g transform="translate(0 36)">
+      <rect width="96" height="38" rx="8" fill="#147A5A"/>
+      <text x="18" y="25" font-family="PingFang SC, Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">国产原创</text>
+      <rect x="106" y="0" width="122" height="38" rx="8" fill="#147A5A"/>
+      <text x="124" y="25" font-family="PingFang SC, Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">亚洲无码原创</text>
+      <rect x="238" y="0" width="94" height="38" rx="8" fill="#FFFFFF" stroke="#E5EAE6"/>
+      <text x="256" y="25" font-family="PingFang SC, Arial, sans-serif" font-size="13" fill="#17231F">高清中字</text>
+      <rect x="342" y="0" width="40" height="38" rx="8" fill="#FFFFFF" stroke="#E5EAE6"/>
+      <text x="355" y="25" font-family="PingFang SC, Arial, sans-serif" font-size="13" fill="#17231F">＋</text>
+    </g>
+  </g>
+
+  <g id="primary-action" transform="translate(24 544)" filter="url(#softShadow)">
+    <rect width="382" height="126" rx="8" fill="#FFFFFF"/>
+    <text x="18" y="31" font-family="PingFang SC, Arial, sans-serif" font-size="14" fill="#6B756F">准备抓取</text>
+    <text x="18" y="56" font-family="PingFang SC, Arial, sans-serif" font-size="18" font-weight="700" fill="#17231F">2 个板块 · 1 页 · 今天新帖</text>
+    <rect x="18" y="76" width="346" height="50" rx="8" fill="url(#primaryGradient)"/>
+    <path d="M128 101H236M224 89L236 101L224 113" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="154" y="108" font-family="PingFang SC, Arial, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF">开始抓取</text>
+  </g>
+
+  <g id="summary" transform="translate(24 692)">
+    <rect width="382" height="82" rx="8" fill="#FFFFFF" stroke="#E5EAE6"/>
+    <text x="16" y="31" font-family="PingFang SC, Arial, sans-serif" font-size="15" font-weight="700" fill="#17231F">结果</text>
+    <text x="16" y="55" font-family="PingFang SC, Arial, sans-serif" font-size="13" fill="#6B756F">暂无内容。抓取完成后显示帖子、磁力和图片统计。</text>
+  </g>
+
+  <g id="settings-preview" transform="translate(24 804)">
+    <text x="0" y="17" font-family="PingFang SC, Arial, sans-serif" font-size="13" fill="#8A938E">设置页会保留：</text>
+    <rect y="30" width="382" height="78" rx="8" fill="#FFFFFF" stroke="#E5EAE6"/>
+    <text x="16" y="58" font-family="PingFang SC, Arial, sans-serif" font-size="14" font-weight="700" fill="#17231F">开发者选项</text>
+    <text x="16" y="80" font-family="PingFang SC, Arial, sans-serif" font-size="12" fill="#6B756F">端口、代理健康检查、XTunnel 日志等默认隐藏</text>
+    <rect x="318" y="53" width="42" height="24" rx="12" fill="#E7ECE8"/>
+    <circle cx="330" cy="65" r="9" fill="#FFFFFF"/>
+  </g>
+</svg>

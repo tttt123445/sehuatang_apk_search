@@ -1,0 +1,17 @@
+out/
+.secrets/
+*.local.yaml
+local.properties
+.gradle/
+.kotlin/
+
+# Build and test artifacts
+app/build/
+coverage.out
+core
+*.test
+
+# Local editor and OS files
+.DS_Store
+.idea/
+.vscode/
